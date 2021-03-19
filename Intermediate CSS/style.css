@@ -1,0 +1,234 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: url('background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0px;
+	font-family: 'Montserrat';
+}
+
+/* START NAV BAR */
+.nav-bar {
+	z-index:1;
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #262a2f;
+	box-shadow: 10px 2px 20px -2px rgba(0, 0, 0, 0.383);
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: all 0.5s;
+
+	align-items: center;
+}
+
+.nav-bar:hover {
+	box-shadow: 10px 5px 20px -2px rgba(0, 0, 0, 0.472);
+}
+
+.nav-icon {
+	width: 40px;
+	border-radius: 20px;
+	margin-left: 30px;
+}
+
+.link-left-div {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.links-left {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: small;
+	font-weight: 620;
+	color: #262a2f;
+	background-color: #f0e7dd;
+	margin-left: 20px;
+	padding: 10px 15px 10px 15px;
+
+	border-style: none;
+	border-color: rgb(49, 190, 138);
+	border-radius: 10px;
+	border-width: 2px;
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: box-shadow 0.2s, color 0.15s;
+}
+
+.links-left:hover {
+	box-shadow: 1px 3px 10px 0px rgb(88, 88, 88);
+	color:rgb(34, 160, 114);
+}
+
+.link-right-div {
+	position: absolute;
+	right: 30px;
+}
+
+.links-right {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: small;
+	font-weight: 620;
+	color: #262a2f;
+	background-color: #f0e7dd;
+	margin-left: 20px;
+	border-radius: 4px;
+	padding: 10px 15px 10px 15px;
+
+	border-style: none;
+	border-color: #4ac0b8;
+	border-radius: 20px;
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: box-shadow 0.2s, color 0.15s;
+}
+
+.links-right:hover {
+	box-shadow: 1px 3px 10px 0px rgb(88, 88, 88);
+	color:rgb(34, 160, 114);
+}
+/* END NAV BAR */
+
+/* START DIV NAME */
+.name-div {
+	width: 30%;
+	margin: 220px auto 0px auto;
+	text-align: center;
+	font-size: x-large;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #262a2f;
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: all 0.25s;
+}
+
+.name-div:hover {
+	color:rgba(85, 235, 185, 0.781);
+	box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.383);
+}
+
+.name-h1 {
+	color: #a7c5eb;
+	font-family: 'Montserrat';
+}
+
+#name-word {
+	color:#f0e4d7
+}
+
+.name-p {
+	margin-bottom: 0px;
+	text-transform: lowercase;
+	font-family: 'Marck Script', cursive;
+}
+/* END DIV NAME */
+
+/* START MIDDLE DIV */
+.middle-div {
+	position: relative;
+	display: flex;
+	margin-top: 350px;
+	width: 100%;
+	height: 260px;
+}
+
+#avatar-image {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -130px;
+	height: 200px;
+	background-color: #f0eae3;
+	border-radius: 200px;
+	padding: 30px;
+}
+
+.middle-text {
+	display: inline-block;
+	position: absolute;
+	font-size: large;
+	top: 20%;
+	left: 65%;
+}
+
+.middle-h1 {
+	display: inline-block;
+	text-align: center;
+	margin: 0px;
+	height: 56.6833px;
+	color:#f0e4d7;
+}
+
+.middle-gif {
+	float: right;
+	margin-left: 15px;
+	width: 60px;
+}
+
+.middle-p {
+	clear: right;
+	text-align: center;
+	font-weight: 500;
+	margin: 0px;
+	color: #262a2f;
+}
+/* END MIDDLE DIV */
+
+/* START FOOTER */
+.footer {
+	background-color: #262a2f;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.644);
+	margin-top: 500px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: small;
+	height: 50px;
+	position: relative;
+	font-weight: 500;
+}
+
+.left-footer-p {
+	margin: 0px;
+	margin-left: 30px;
+	color:#f0e7dd;	
+}
+
+.right-footer-div {
+	position: absolute;
+	right: 30px;
+}
+
+.footer-links {
+	padding: 5px;
+	text-decoration: none;
+	color:#f0e7dd;	
+	margin-left: 10px;
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: all 0.15s;
+}
+
+.footer-links:hover {
+	color:#ffffff;	
+}
+
+.hr-1 {
+	margin-top: 350px;
+	height: 0px;
+	width: 6%;
+	border-style: none;
+	border-top-style: dotted;
+	border-width: 10px;
+	border-color: #0e1013;
+}
+/* END FOOTER */
