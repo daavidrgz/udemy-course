@@ -232,3 +232,8 @@ body {
 	border-color: #0e1013;
 }
 /* END FOOTER */
+
+/* JS CLASSES */
+.huge {
+	font-size: xx-large;
+}

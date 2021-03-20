@@ -1,0 +1,82 @@
+body {
+	margin: 0px;
+	background-color: #e9896a;
+	font-family: 'Amatic SC';
+	text-align: center;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	color: white;
+	margin: 20px 0 0 0;
+	font-size: 10rem;
+	text-shadow: 5px 5px 0px rgb(110, 110, 110);
+}
+
+.dice-div {
+	margin-top: 150px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.player-1 {
+	padding: 20px;
+	border-style:double;
+	border-width: 5px;
+	border-radius: 10px;
+	border-color: rgb(233, 233, 233);
+	text-align: center;
+	box-shadow: 5px 5px 0px rgb(110, 110, 110);
+}
+
+.player-2 {
+	padding: 20px;
+	border-style: double;
+	border-width: 5px;
+	border-radius: 10px;
+	border-color: rgb(233, 233, 233);
+	margin-left: 200px;
+	text-align: center;
+	box-shadow: 5px 5px 0px rgb(110, 110, 110);
+}
+
+.dice-player-1 {
+	width: 150px;
+}
+
+.dice-player-2 {
+	width: 150px;
+}
+
+.players-h2 {
+	font-size: 3rem;
+	margin: 20px auto 0px auto;
+}
+
+.btn-div {
+	width: 10%;
+	margin: 80px auto 0px auto;
+	font-size: 2rem;
+}
+
+.btn {
+	padding: 10px;
+	border-radius: 10px;
+	border-style: solid;
+	background-color: white;
+	box-shadow: 5px 5px 0px rgb(110, 110, 110);
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: background-color 0.2s box-shadow 0.05s;
+}
+
+.btn:hover {
+	background-color:rgb(207, 207, 207);
+}
+.btn:active {
+	box-shadow: 5px 5px 0px rgba(110, 110, 110, 0);
+	position: relative;
+	top: 2px;
+}
