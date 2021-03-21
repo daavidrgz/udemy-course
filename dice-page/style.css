@@ -1,75 +1,75 @@
 body {
 	margin: 0px;
-	background-color: #e9896a;
-	font-family: 'Amatic SC';
+	background-color: #98ded9;
+	font-family: 'Lobster';
+	font-weight: 900;
 	text-align: center;
 }
 
 .title {
-	display: flex;
-	justify-content: center;
-	color: white;
-	margin: 20px 0 0 0;
-	font-size: 10rem;
-	text-shadow: 5px 5px 0px rgb(110, 110, 110);
+	color: #f6f6f6;
+	padding: 20px 0px;
+	font-size: 6rem;
+	text-shadow: 5px 5px rgb(110, 110, 110);
+	background-color: #383e56;
+
+	border-bottom: 5px double #a6f0c6;
 }
 
 .dice-div {
-	margin-top: 150px;
-	display: flex;
+	margin-top: 100px;
 	width: 100%;
-	justify-content: center;
 }
 
-.player-1 {
-	padding: 20px;
-	border-style:double;
-	border-width: 5px;
-	border-radius: 10px;
-	border-color: rgb(233, 233, 233);
-	text-align: center;
-	box-shadow: 5px 5px 0px rgb(110, 110, 110);
-}
-
-.player-2 {
-	padding: 20px;
+.players {
+	background-color: #a6f0c6;
+	display: inline-block;
+	margin: 0px 100px;
+	padding: 40px;
 	border-style: double;
 	border-width: 5px;
 	border-radius: 10px;
-	border-color: rgb(233, 233, 233);
-	margin-left: 200px;
-	text-align: center;
-	box-shadow: 5px 5px 0px rgb(110, 110, 110);
+	border-color: #383e56;
+	box-shadow: 5px 5px rgba(110, 110, 110, 0.486);
+
+	color: #2b2e4a;
+	font-size: 2rem;
+	text-shadow: 3px 3px rgba(110, 110, 110, 0.349);
+
+	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	transition: all 0.5s;
+}
+
+.players:hover {
+	box-shadow: 5px 5px rgb(110, 110, 110);
 }
 
 .dice-player-1 {
-	width: 150px;
+	width: 200px;
 }
-
 .dice-player-2 {
-	width: 150px;
-}
-
-.players-h2 {
-	font-size: 3rem;
-	margin: 20px auto 0px auto;
+	width: 200px;
 }
 
 .btn-div {
-	width: 10%;
+	width: 15%;
 	margin: 80px auto 0px auto;
 	font-size: 2rem;
 }
 
 .btn {
+	color: #2b2e4a;
+	cursor: pointer;
 	padding: 10px;
 	border-radius: 10px;
 	border-style: solid;
-	background-color: white;
+	background-color: #c7ffd8;
 	box-shadow: 5px 5px 0px rgb(110, 110, 110);
+	font-family: 'Indie Flower';
 
 	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-	transition: background-color 0.2s box-shadow 0.05s;
+	transition: background-color 0.2s, box-shadow 0.05s;
+	user-select: none;
 }
 
 .btn:hover {

@@ -1,10 +1,12 @@
+document.querySelector(".btn").addEventListener("click", rollDice);
+
 
 function rollDice() {
 	var player1 = Math.floor(Math.random() * 6) + 1;
 	var player2 = Math.floor(Math.random() * 6) + 1;
 
-	var emoji = ["🥳", "🎉", "🥇", "🏆"];
-	var numEmoji = Math.floor(Math.random() * 4);
+	var emoji = [":)", ";)", "🥇", "🏆"];
+	var numEmoji = Math.floor(Math.random() * emoji.length);
 
 	document.querySelector(".dice-player-1").setAttribute("src", "images/dice" + player1 + ".svg");
 	document.querySelector(".dice-player-2").setAttribute("src", "images/dice" + player2 + ".svg");

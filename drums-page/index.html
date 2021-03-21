@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" href="node_modules/pattern.css/dist/pattern.css">
+	<title>Drum Kit</title>
+</head>
+
+<body>
+	<h1 class="title-text">
+		The Drum Kit
+	</h1>
+
+	<img style="width: 100px; position: absolute; left: 400px; top: 300px;" src="images/drum.svg" alt="">
+	<img style="width: 100px; position: absolute; right: 100px; top: 320px;" src="images/drum2.svg" alt="">
+	<img style="width: 100px; position: absolute; right: 50%; bottom: 350px;" src="images/drumstick.svg" alt="">
+
+	<div class="key-container pattern-cross-dots-md">
+		<div id="a" class="key" sound="sounds/kick.wav">
+			<p class="sound-name">Kick</p>
+			a
+		</div>
+		<div id="s" class="key" sound="sounds/snare1.wav">
+			<p class="sound-name">Snare 1</p>
+			s
+		</div>
+		<div id="d" class="key" sound="sounds/snare2.wav">
+			<p class="sound-name">Snare 2</p>
+			d
+		</div>
+		<div id="j" class="key" sound="sounds/closed-hat.wav">
+			<p class="sound-name">CLosed-Hat</p>
+			j
+		</div>
+		<div id="k" class="key" sound="sounds/tom.wav">
+			<p class="sound-name">Tom</p>
+			k
+		</div>
+		<div id="l" class="key" sound="sounds/open-hat.wav">
+			<p class="sound-name">Open-Hat</p>
+			l
+		</div>
+	</div>
+	<div class="footer">
+		© 2021 Drum Kit | All rights reserved
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
