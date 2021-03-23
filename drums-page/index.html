@@ -11,43 +11,128 @@
 </head>
 
 <body>
-	<h1 class="title-text">
-		The Drum Kit
-	</h1>
+	<div class="menu">
+		<div class="toggle-menu-container" onclick="handleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
 
-	<img style="width: 100px; position: absolute; left: 400px; top: 300px;" src="images/drum.svg" alt="">
-	<img style="width: 100px; position: absolute; right: 100px; top: 320px;" src="images/drum2.svg" alt="">
-	<img style="width: 100px; position: absolute; right: 50%; bottom: 350px;" src="images/drumstick.svg" alt="">
+		<div class="selected-sounds">
+			<h1 class="menu-h1">- Selected -</h1>
+			<div class="sound-container-menu">
+				Kick
+				<a class="add-sound-button remove-sound-button" sound="sounds/kick.wav" bind-key="a" instrument="Kick" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Snare 1
+				<a class="add-sound-button remove-sound-button" sound="sounds/snare1.wav" bind-key="s" instrument="Snare 1" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Snare 2
+				<a class="add-sound-button remove-sound-button" sound="sounds/snare2.wav" bind-key="d" instrument="Snare 2" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Closed Hat
+				<a class="add-sound-button remove-sound-button" sound="sounds/closed-hat.wav" bind-key="j" instrument="Closed Hat" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Tom
+				<a class="add-sound-button remove-sound-button" sound="sounds/tom.wav" bind-key="k" instrument="Tom" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Open Hat
+				<a class="add-sound-button remove-sound-button" sound="sounds/open-hat.wav" bind-key="l" instrument="Open Hat" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Low Tom
+				<a class="add-sound-button remove-sound-button" sound="sounds/low-tom.wav" bind-key="f" instrument="Low Tom" onclick="removeElement(this)">-</a>
+			</div>
+			<div class="sound-container-menu">
+				Closed Hat 2
+				<a class="add-sound-button remove-sound-button" sound="sounds/closed-hat2.wav" bind-key="n" instrument="Closed Hat 2" onclick="removeElement(this)">-</a>
+			</div>
+		</div>
+		
+		<div class="hr-2"></div>
 
-	<div class="key-container pattern-cross-dots-md">
-		<div id="a" class="key" sound="sounds/kick.wav">
-			<p class="sound-name">Kick</p>
-			a
+		<div class="to-add-sounds">
+			<h1 class="menu-h1">- Add -</h1>
+			<div class="sound-container-menu">
+				Ride
+				<a class="add-sound-button" sound="sounds/ride.wav" bind-key="p" instrument="Ride" onclick="addElement(this)">+</a>
+			</div>
+			<div class="sound-container-menu">
+				Clap
+				<a class="add-sound-button" sound="sounds/clap.wav" bind-key="x" instrument="Clap" onclick="addElement(this)">+</a>
+			</div>
+			<div class="sound-container-menu">
+				Snap
+				<a class="add-sound-button" sound="sounds/snap.wav" bind-key="z" instrument="Snap" onclick="addElement(this)">+</a>
+			</div>
+			<div class="sound-container-menu">
+				Crash
+				<a class="add-sound-button" sound="sounds/crash.wav" bind-key="r" instrument="Crash" onclick="addElement(this)">+</a>
+			</div>
+			<div class="sound-container-menu">
+				High Tom
+				<a class="add-sound-button" sound="sounds/high-tom.wav" bind-key="h" instrument="High Tom" onclick="addElement(this)">+</a>
+			</div>
 		</div>
-		<div id="s" class="key" sound="sounds/snare1.wav">
-			<p class="sound-name">Snare 1</p>
-			s
+		
+	</div>
+	
+	<img style="width: 100px; position: absolute; left: 22%; top: 32%;" src="images/drum.svg" alt="">
+	<img style="width: 100px; position: absolute; right: 5%; top: 35%;" src="images/drum2.svg" alt="">
+	<img style="width: 100px; position: absolute; right: 48%; top: 55%;" src="images/drumstick.svg" alt="">
+
+	<div class="page-content">
+		<div class="nav-bar">
+			<h1 class="title-text">
+				The Drum Kit
+			</h1>
 		</div>
-		<div id="d" class="key" sound="sounds/snare2.wav">
-			<p class="sound-name">Snare 2</p>
-			d
-		</div>
-		<div id="j" class="key" sound="sounds/closed-hat.wav">
-			<p class="sound-name">CLosed-Hat</p>
-			j
-		</div>
-		<div id="k" class="key" sound="sounds/tom.wav">
-			<p class="sound-name">Tom</p>
-			k
-		</div>
-		<div id="l" class="key" sound="sounds/open-hat.wav">
-			<p class="sound-name">Open-Hat</p>
-			l
+		<div id="key-container" class="key-container pattern-cross-dots-md">
+			<div id="a" class="key" sound="sounds/kick.wav">
+				<p class="sound-name">Kick</p>
+				a
+			</div>
+			<div id="s" class="key" sound="sounds/snare1.wav">
+				<p class="sound-name">Snare 1</p>
+				s
+			</div>
+			<div id="d" class="key" sound="sounds/snare2.wav">
+				<p class="sound-name">Snare 2</p>
+				d
+			</div>
+			<div id="j" class="key" sound="sounds/closed-hat.wav">
+				<p class="sound-name">CLosed-Hat</p>
+				j
+			</div>
+			<div id="k" class="key" sound="sounds/tom.wav">
+				<p class="sound-name">Tom</p>
+				k
+			</div>
+			<div id="l" class="key" sound="sounds/open-hat.wav">
+				<p class="sound-name">Open-Hat</p>
+				l
+			</div>
+			<div id="f" class="key" sound="sounds/low-tom.wav">
+				<p class="sound-name">Low Tom</p>
+				f
+			</div>
+			<div id="n" class="key" sound="sounds/closed-hat2.wav">
+				<p class="sound-name">Closed Hat 2</p>
+				n
+			</div>
 		</div>
 	</div>
+	
 	<div class="footer">
 		© 2021 Drum Kit | All rights reserved
 	</div>
+
+	<script src="jQuery.min.js"></script>
 	<script src="index.js"></script>
 </body>
 </html>

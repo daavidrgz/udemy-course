@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Simon Game</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="node_modules/pattern.css/dist/pattern.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+</head>
+<body class="pattern-horizontal-lines-xl">
+	<!-- Absolute positioined elements -->
+	<div id="vertical-rule"></div>
+	<img id="star-img" src="images/star-sketched-favourite-symbol.svg" alt="">
+	<img id="check-img" src="images/verification-sign-sketch.svg" alt="">
+	<img id="heart-img" src="images/heart-sketch.svg" alt="">
+	<img id="arrow-img" src="images/pointer-arrow-sketch.svg" alt="">
+	<div class="your-turn">
+		Your Turn
+	</div>
+
+	<audio id="bg-music" src="sounds/bg-music.mp3" loop></audio> <!-- Bg Music -->
+	<img id="volume-img" src="images/volume-up.svg" alt="Volume Button" onclick="toggleMute()">
+	<div id="bar-to-mute"></div>
+	<!--  -->
+
+	<nav>
+		<div class="title">The Simon Game <span class="red-dot">.</span></div>
+	</nav>
+
+	<div class="key-container">
+		<div id="red-key" sound="sounds/simonSound1.mp3" class="key"></div>
+		<div id="blue-key" sound="sounds/simonSound2.mp3" class="key"></div>
+		<div id="green-key" sound="sounds/simonSound3.mp3" class="key"></div>
+		<div id="yellow-key" sound="sounds/simonSound4.mp3" class="key"></div>
+	</div>
+
+	<div class="start-game-button" onclick="playGame()">
+		Start Playing
+	</div>
+	<script src="jQuery.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
