@@ -83,7 +83,9 @@ body {
 	position: absolute;
 	left: 10%;
 	bottom: 8%;
-	
+}
+#arrow-img:hover {
+	transform: rotate(20deg);
 }
 
 #volume-img {
@@ -241,9 +243,10 @@ body {
 .game-over {
 	position: absolute;
 	z-index: 1;
-	left: 38.5%;
+	left: 30.5%;
 	top: -60%;
 	padding: 1%;
+	width: 35%;
 
 	background-color: #222831;
 	color: #e84545;
