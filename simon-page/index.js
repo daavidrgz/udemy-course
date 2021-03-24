@@ -3,7 +3,6 @@
 $(".your-turn").fadeOut(0); // Start hidding the "Your Turn" text
 $(".current-round").slideUp(0); // Start hidding the "Current Round" text
 document.querySelector("#bg-music").volume = 0.2; // Setting the vol of the bg music
-$("html").mousemove((event) => followMouse(event));
 
 var loopVar;
 var testVar;
@@ -11,8 +10,14 @@ var keys = ["red-key", "blue-key", "green-key", "yellow-key"];
 var roundKeys = [];
 var numGames = 0;
 
-
-
+var isFollowingOn = false;
+function toggleFollowing() {
+	if ( !isFollowingOn )
+		$("html").on("mousemove",(event) => followMouse(event));
+	else
+		$("html").off("mousemove");
+	isFollowingOn = !isFollowingOn;
+}
 
 var arrowPos = $("#arrow-img").position();
 function followMouse(event) {
@@ -120,16 +125,17 @@ function toggleMute() {
 }
 
 function gameOver() {
+	$(".key").off("click");
 	numGames++;
 	$(".game-over").slideDown(100);
 	toggleSaturationFilter();
-	document.querySelector("#bg-music").pause();
+	document.querySelector("#bg-music").volume = 0;
 	var gameOverMusic = new Audio("sounds/game-over.wav");
 	gameOverMusic.volume = 0.4;
 	gameOverMusic.play();
 
 	animate({animation: makeEaseOut(bounce), draw: function(progress){
-		$(".game-over").css("top", (progress * 93 - 60) + "%");
+		$(".game-over").css("top", (progress * 95 - 60) + "%");
 	}, duration: 1500});
 	roundKeys = [];
 	setTimeout(function() {
