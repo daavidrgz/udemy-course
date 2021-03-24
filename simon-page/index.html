@@ -22,25 +22,32 @@
 	<div class="your-turn">
 		Your Turn
 	</div>
-
+	<div class="current-round">
+		Round 1
+	</div>
+	<div class="game-over">
+		Game Over
+	</div>
 	<audio id="bg-music" src="sounds/bg-music.mp3" loop></audio> <!-- Bg Music -->
 	<img id="volume-img" src="images/volume-up.svg" alt="Volume Button" onclick="toggleMute()">
-	<div id="bar-to-mute"></div>
+	<div id="bar-to-mute" class="pattern-diagonal-lines-sm"></div>
 	<!--  -->
 
-	<nav>
-		<div class="title">The Simon Game <span class="red-dot">.</span></div>
-	</nav>
-
-	<div class="key-container">
-		<div id="red-key" sound="sounds/simonSound1.mp3" class="key"></div>
-		<div id="blue-key" sound="sounds/simonSound2.mp3" class="key"></div>
-		<div id="green-key" sound="sounds/simonSound3.mp3" class="key"></div>
-		<div id="yellow-key" sound="sounds/simonSound4.mp3" class="key"></div>
-	</div>
-
-	<div class="start-game-button" onclick="playGame()">
-		Start Playing
+	<div id="all-items">
+		<nav>
+			<div class="title">The Simon Game <span class="red-dot">.</span></div>
+		</nav>
+	
+		<div class="key-container">
+			<div id="red-key" sound="sounds/simonSound1.mp3" class="key"></div>
+			<div id="blue-key" sound="sounds/simonSound2.mp3" class="key"></div>
+			<div id="green-key" sound="sounds/simonSound3.mp3" class="key"></div>
+			<div id="yellow-key" sound="sounds/simonSound4.mp3" class="key"></div>
+		</div>
+	
+		<div class="start-game-button" onclick="playGame()">
+			Start Playing
+		</div>
 	</div>
 	<script src="jQuery.min.js"></script>
 	<script src="index.js"></script>
