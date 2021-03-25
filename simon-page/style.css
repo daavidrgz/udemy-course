@@ -262,6 +262,11 @@ body {
 	border-bottom-left-radius: 14px;
 
 	transform: rotate(-5deg);
+
+	transition: opacity 0.4s;
+}
+.fade-in {
+	opacity: 0;
 }
 
 .game-over {

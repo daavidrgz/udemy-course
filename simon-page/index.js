@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
 $(".your-turn").fadeOut(0); // Start hidding the "Your Turn" text
-$(".current-round").slideUp(0); // Start hidding the "Current Round" text
 $("#crown-img").fadeOut(0);
 $("#quit-button").slideUp(0);
 document.querySelector("#bg-music").volume = 0.2; // Setting the vol of the bg music
@@ -75,18 +74,18 @@ function testUser() {
 }
 
 function showCurrentRound() {
-	$(".current-round").slideUp(200);
-	$(".current-round").delay(500).slideDown(200);
+	$(".current-round").addClass("fade-in");
 	setTimeout(function() {
+		$(".current-round").removeClass("fade-in");
 		$(".current-round").text("Round " + roundKeys.length);
-	}, 500);	
+	}, 400);	
 }
 
 function showYourTurn() {
 	var colors = ["#be2431b6", "rgb(49, 163, 74)", "#0f1123c9"];
-	$(".your-turn").css("transform", "rotate(" + (Math.floor(Math.random() * 90) - 45) + "deg)");
+	$(".your-turn").css("transform", "rotate(" + (Math.floor(Math.random() * 90) - 55) + "deg)");
 	$(".your-turn").css("border-color", colors[Math.floor(Math.random() * 3)]);
-	$(".your-turn").fadeIn(300);
+	$(".your-turn").slideDown(300);
 	// moveYourTurn();
 }
 
@@ -239,7 +238,7 @@ function exitGame() {
 	numGames = 0;
 
 	$(".your-turn").fadeOut(200);
-	$(".current-round").slideUp(200);
+	$(".current-round").addClass("fade-in");
 	$(".game-over").slideUp(100);
 	$("#quit-button").slideUp(200);
 	$("#start-button").slideUp(200);
