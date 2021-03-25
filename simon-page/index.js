@@ -109,9 +109,9 @@ function testCorrectKey(event) {
 		$("#" + keyPressed).addClass("key-pressed");
 		var sound = new Audio(event.target.getAttribute("sound"));
 		sound.play();
+		testVar++;
 		setTimeout(function() {
 			$("#" + keyPressed).removeClass("key-pressed");
-			testVar++;
 			if ( testVar == roundKeys.length )
 				playGame();
 			
