@@ -3,6 +3,7 @@ html {
 }
 
 body {
+	position: absolute;
 	background-color: #f8f4e1;
 	font-family: 'Amatic SC';
 	color: #0f1123;
@@ -11,7 +12,6 @@ body {
 	margin: 0px;
 
 	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-	transition: all 1s;
 }
 .desaturated {
 	filter: saturate(0.3);
@@ -84,9 +84,6 @@ body {
 	left: 10%;
 	bottom: 8%;
 }
-#arrow-img:hover {
-	transform: rotate(20deg);
-}
 
 #volume-img {
 	position: absolute;
@@ -120,6 +117,21 @@ body {
 	top: 22px;
 }
 
+#crown-img {
+	z-index: 1;
+	width: 50px;
+	position: absolute;
+	right: 22%;
+	top: 31.5%;
+
+	transform: rotate(-40deg);
+
+	transition: top 0.2s;
+}
+#crown-img:hover {
+	top: 30.5%;
+}
+
 .title {
 	margin-top: -20px;
 	text-align: center;
@@ -128,7 +140,7 @@ body {
 	font-weight: 600;	
 	color: #0f1123;
 
-	border-bottom: 3px dashed #0f1123c9;
+	border-bottom: 3px dashed #0f1123a8;
 }
 .red-dot {
 	position: relative;
@@ -139,16 +151,18 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	margin: 100px auto 0px auto;
-	width: 500px;
-	height: 100%;
+	justify-content: center;
+	align-content: flex-start;
+	margin: 5% auto 0px auto;
+	width: 30%;
+	height: 50%;
 }
 
 .key {
 	cursor: pointer;
-	margin: 20px;
-	width: 200px;
-	height: 200px;
+	margin: 3%;
+	width: 35%;
+	height: 40%;
 	position: relative;
 
 	border: 2px solid #0f1123;
@@ -184,14 +198,23 @@ body {
 	background-color: #cfa92cf1;
 }
 
-.start-game-button {
-	margin: 50px auto 0px auto;
+.buttons-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.game-button {
+	display: inline-block;
+	margin: 1.7% 1%;
 	text-align: center;
 	width: 10%;
 	cursor: pointer;
 	position: relative;
-
-	font-size: 3rem;
+	
+	font-size: 2.5rem;
 	border-radius: 10px;
 	border: 2px solid #0f1123c9;
 
@@ -201,27 +224,31 @@ body {
 	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 	transition: top 0.05s, box-shadow 0.1s, background-color 0.2s;
 }
-.start-game-button:hover {
+.game-button:hover {
 	background-color: #dbd6bc;
 }
-.start-game-button:active {
+.game-button:active {
 	top: 5px;
 	box-shadow: none;
 }
 
+#quit-button {
+	color: #e84545;
+}
+
 .your-turn {
 	position: absolute;
-	right: 10%;
-	top: 45%;
+	right: 18%;
+	bottom: 15%;
 	padding: 10px;
 	
-	font-size: 7rem;
+	font-size: 5rem;
 	font-weight: 900;
 
 	border: 2px dashed #0f1123c9;
 	border-radius: 10px;
 
-	transform: rotate(20deg);
+	transition: transform 1s;
 }
 
 .current-round {
@@ -243,10 +270,10 @@ body {
 .game-over {
 	position: absolute;
 	z-index: 1;
-	left: 30.5%;
+	left: 33.5%;
 	top: -60%;
 	padding: 1%;
-	width: 35%;
+	width: 30%;
 
 	background-color: #222831;
 	color: #e84545;
@@ -255,5 +282,70 @@ body {
 	border-radius: 20px;
 	text-align: center;
 
-	box-shadow: 0px 0px 20px #e84545;
+	box-shadow: 0px 0px 30px 10px #e84545;
+}
+
+.handwritten-text {
+	font-family: 'Homemade Apple';
+	position: absolute;
+	z-index: 1;
+	left: 13%;
+	top: 22%;
+	width: 15%;
+
+	color: #284283;
+	font-size: 2rem;
+	text-align: center;
+	transform: rotate(-10deg);
+}
+
+.scores-container {
+	position: absolute;
+	right: 5%;
+	top: 15%;
+	width: 20%;
+	height: 40%;
+
+	border: 2px solid #0f1123cc;
+	border-radius: 10px;
+	background-color: #e7e2ccd5;
+	transform: rotate(-15deg);
+
+	text-align: center;
+}
+
+.scores-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5rem;
+	font-weight: 900;
+	height: 24%;
+	width: 100%;
+	
+	border-bottom: 2px solid #0f1123cc;
+	text-transform: uppercase;
+}
+
+.score {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	height: 24%;
+	width: 100%;
+	
+	border-bottom: 2px solid #0f1123cc;
+	text-transform: uppercase;
+}
+
+.final-score {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	height: 24%;
+	width: 100%;
+
+	text-transform: uppercase;
 }

@@ -2,6 +2,8 @@
 
 $(".your-turn").fadeOut(0); // Start hidding the "Your Turn" text
 $(".current-round").slideUp(0); // Start hidding the "Current Round" text
+$("#crown-img").fadeOut(0);
+$("#quit-button").slideUp(0);
 document.querySelector("#bg-music").volume = 0.2; // Setting the vol of the bg music
 
 var loopVar;
@@ -40,11 +42,6 @@ function playGame() {
 	testVar = 0;
 	$(".key").off("click");
 	$(".your-turn").fadeOut(200);
-	$(".start-game-button").slideUp(200); // Remove the Start Button
-	$(".game-over").slideUp(100);
-	if ( numGames != 0 && testVar == roundKeys.length )
-		toggleSaturationFilter();
-	document.querySelector("#bg-music").volume = 0.1;
 
 	roundKeys.push(keys[Math.floor(Math.random() * 4)]);
 	showCurrentRound();
@@ -56,6 +53,18 @@ function playGame() {
 	setTimeout(function(){
 		testUser();
 	}, roundKeys.length * 800);
+}
+
+function playGameButton() {
+	document.querySelector("#bg-music").volume = 0.1;
+	if ( numGames != 0 ) {
+		toggleSaturationFilter();
+	}
+	roundKeys = []; // Restart the roundKeys var
+	$("#quit-button").slideUp(200); // Remove the Quit Button
+	$("#start-button").slideUp(200); // Remove the Start Button
+	$(".game-over").slideUp(100); // Remove the Game Over div
+	playGame();
 }
 
 function testUser() {
@@ -78,7 +87,19 @@ function showYourTurn() {
 	$(".your-turn").css("transform", "rotate(" + (Math.floor(Math.random() * 90) - 45) + "deg)");
 	$(".your-turn").css("border-color", colors[Math.floor(Math.random() * 3)]);
 	$(".your-turn").fadeIn(300);
+	// moveYourTurn();
 }
+
+// function moveYourTurn() {
+// 	console.log($(".your-turn").css("transform"));
+// 	$(".your-turn").css("transform", "rotate(2deg)");
+// 	setTimeout(function() {
+// 		$(".your-turn").css("transform", "rotate(-2deg)");
+// 		setTimeout(function() {
+// 			moveYourTurn();
+// 		}, 900);
+// 	},900);
+// }
 
 function testCorrectKey(event) {
 	var keyPressed = event.target.id;
@@ -125,30 +146,36 @@ function toggleMute() {
 }
 
 function gameOver() {
+	showScores(roundKeys.length);
+	$("#crown-img").fadeIn(300);
+
 	$(".key").off("click");
 	numGames++;
 	$(".game-over").slideDown(100);
-	toggleSaturationFilter();
-	document.querySelector("#bg-music").volume = 0;
+	toggleSaturationFilter(); // Desaturate all the elements
+	document.querySelector("#bg-music").volume = 0; // Mute the bg music
 	var gameOverMusic = new Audio("sounds/game-over.wav");
 	gameOverMusic.volume = 0.4;
 	gameOverMusic.play();
 
 	animate({animation: makeEaseOut(bounce), draw: function(progress){
-		$(".game-over").css("top", (progress * 95 - 60) + "%");
+		$(".game-over").css("top", (progress * 64 - 30) + "%");
 	}, duration: 1500});
-	roundKeys = [];
+
 	setTimeout(function() {
-		$(".start-game-button").text("Retry");
-		$(".start-game-button").slideDown(300);
+		$("#start-button").text("Retry");
+		$("#start-button").slideDown(300);
+		$("#quit-button").slideDown(300);
 	}, 2000);
 }
 
 function toggleSaturationFilter() {
 	$("body").find('*').toggleClass("desaturated");
 	$(".game-over").removeClass("desaturated");
-	$(".start-game-button").toggleClass("desaturated");
-	$(".start-game-button").css("background-color", "#fbfaf0");
+
+	$(".buttons-container").removeClass("desaturated");
+	$("#start-button").removeClass("desaturated");
+	$("#quit-button").removeClass("desaturated");
 }
 
 function animate({animation, draw, duration}) {
@@ -182,4 +209,33 @@ function bounce(timeFraction) {
             return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2);
         }
     }
+}
+
+var bestGames = [];
+function showScores(round) {
+
+	bestGames.push(round);
+	bestGames.sort(function(a,b) {
+		return b - a;
+	});
+	for ( i = 0; i < 3; i++ ) {
+		if ( i < bestGames.length )
+			$("#score" + (1+i)).text((i+1) + ".- Round " + bestGames[i]);
+	}
+}
+
+function exitGame() {
+	document.querySelector("#bg-music").volume = 0.2;
+	toggleSaturationFilter();
+	numGames = 0;
+
+	$(".your-turn").fadeOut(200);
+	$(".current-round").slideUp(200);
+	$(".game-over").slideUp(100);
+	$("#quit-button").slideUp(200);
+	$("#start-button").slideUp(200);
+	$("#start-button").delay(500).slideDown(200);
+	setTimeout(function() {
+		$("#start-button").text("Continue");
+	}, 500);
 }

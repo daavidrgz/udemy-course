@@ -11,14 +11,16 @@
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet"> 
 </head>
 <body class="pattern-horizontal-lines-xl">
+
 	<!-- Absolute positioined elements -->
 	<div id="vertical-rule"></div>
-	<img id="star-img" src="images/star-sketched-favourite-symbol.svg" alt="">
-	<img id="check-img" src="images/verification-sign-sketch.svg" alt="">
-	<img id="heart-img" src="images/heart-sketch.svg" alt="">
-	<img id="arrow-img" src="images/pointer-arrow-sketch.svg" onclick="toggleFollowing()" alt="">
+	<img id="star-img" src="images/star-sketched-favourite-symbol.svg" alt="Start Image">
+	<img id="check-img" src="images/verification-sign-sketch.svg" alt="Check Image">
+	<img id="heart-img" src="images/heart-sketch.svg" alt="Heart Image">
+	<img id="arrow-img" src="images/pointer-arrow-sketch.svg" onclick="toggleFollowing()" alt="Arrow Image">
 	<div class="your-turn">
 		Your Turn
 	</div>
@@ -28,27 +30,42 @@
 	<div class="game-over">
 		Game Over
 	</div>
+	<div class="handwritten-text">
+		Far, far away, a tiny thing is gonna born.
+	</div>
 	<audio id="bg-music" src="sounds/bg-music.mp3" loop></audio> <!-- Bg Music -->
 	<img id="volume-img" src="images/volume-up.svg" alt="Volume Button" onclick="toggleMute()">
 	<div id="bar-to-mute" class="pattern-diagonal-lines-sm"></div>
+
+	<img id="crown-img" src="images/crown-sketch-variant.svg" alt="Crown Image">
+	<div class="scores-container">
+		<div class="scores-text">Scores</div>
+		<div id="score1" class="score"></div>
+		<div id="score2" class="score"></div>
+		<div id="score3" class="final-score"></div>
+	</div>
 	<!--  -->
 
-	<div id="all-items">
-		<nav>
-			<div class="title">The Simon Game <span class="red-dot">.</span></div>
-		</nav>
+	<nav>
+		<div class="title">The Simon Game <span class="red-dot">.</span></div>
+	</nav>
 	
-		<div class="key-container">
-			<div id="red-key" sound="sounds/simonSound1.mp3" class="key"></div>
-			<div id="blue-key" sound="sounds/simonSound2.mp3" class="key"></div>
-			<div id="green-key" sound="sounds/simonSound3.mp3" class="key"></div>
-			<div id="yellow-key" sound="sounds/simonSound4.mp3" class="key"></div>
-		</div>
-	
-		<div class="start-game-button" onclick="playGame()">
+	<div class="key-container">
+		<div id="red-key" sound="sounds/simonSound1.mp3" class="key"></div>
+		<div id="blue-key" sound="sounds/simonSound2.mp3" class="key"></div>
+		<div id="green-key" sound="sounds/simonSound3.mp3" class="key"></div>
+		<div id="yellow-key" sound="sounds/simonSound4.mp3" class="key"></div>
+	</div>
+		
+	<div class="buttons-container">
+		<div id="start-button" class="game-button" onclick="playGameButton()">
 			Start Playing
 		</div>
+		<div id="quit-button" class="game-button" onclick="exitGame()">
+			Quit
+		</div>
 	</div>
+		
 	<script src="jQuery.min.js"></script>
 	<script src="index.js"></script>
 </body>
