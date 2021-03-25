@@ -167,13 +167,14 @@ body {
 	box-shadow: 7px 7px #222831a6;
 
 	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-	transition: top 0.05s, box-shadow 0.1s, filter 0.1s;
+	transition: top 0.1s, box-shadow 0.1s, filter 0.1s;
+	outline: none;
 }
 
 .key-pressed {
-	top: -70px;
+	top: 4px;
 	box-shadow: none;
-	filter: saturate(2);
+	filter: brightness(1.5) saturate(1.5);
 }
 
 .illuminated-key {
@@ -302,7 +303,6 @@ body {
 	right: -10%;
 }
 
-
 .scores-text {
 	display: flex;
 	align-items: center;
@@ -399,6 +399,14 @@ body {
 		height: 40%;
 		margin-top: 20%;
 	}
+	.key {
+		box-shadow: 5px 5px #222831a6;
+	}
+	.key-pressed {
+		top: 4px;
+		box-shadow: none;
+		filter: brightness(1.5) saturate(1.5);
+	}
 	.title {
 		border-top: 2px dashed #0f1123a8;
 		border-bottom: 2px dashed #0f1123a8;
@@ -441,6 +449,25 @@ body {
 		left: 18%;
 		width: 60%;
 		font-size: 3rem;
+	}
+	.current-round {
+		font-size: 8vw;
+		width: 20%;
+		text-align: center;
+		top: 21%;
+		left: 37%;
+		padding: 2%;
+		border: 2px dotted #d37c0af1;
+		transform: rotate(0deg);
+		border-radius: 10px;
+
+	}
+	.your-turn {
+		right: 15%;
+		bottom: 15%;
+		padding: 2%;
+		
+		font-size: 2.5rem;
 	}
 	#vertical-rule {
 		width: 2px;

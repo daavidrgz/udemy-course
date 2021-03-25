@@ -107,11 +107,11 @@ function testCorrectKey(event) {
 		gameOver();
 
 	else {
-		$("#" + keyPressed).addClass("illuminated-key");
+		$("#" + keyPressed).addClass("key-pressed");
 		var sound = new Audio(event.target.getAttribute("sound"));
 		sound.play();
 		setTimeout(function() {
-			$("#" + keyPressed).removeClass("illuminated-key");
+			$("#" + keyPressed).removeClass("key-pressed");
 			testVar++;
 			if ( testVar == roundKeys.length )
 				playGame();
