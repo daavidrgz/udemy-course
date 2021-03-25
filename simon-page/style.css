@@ -28,7 +28,7 @@ body {
 
 #star-img {
 	opacity: 70%;
-	width: 100px;
+	width: 5%;
 	position: absolute;
 	left: 5%;
 	top: 30%;
@@ -44,7 +44,7 @@ body {
 
 #check-img {
 	opacity: 90%;
-	width: 70px;
+	width: 4%;
 	position: absolute;
 	right: 28%;
 	top: 2%;
@@ -58,7 +58,7 @@ body {
 }
 
 #heart-img {
-	width: 100px;
+	width: 5%;
 	position: absolute;
 	right: 1%;
 	bottom: 2%;
@@ -79,7 +79,7 @@ body {
 
 #arrow-img {
 	opacity: 85%;
-	width: 150px;
+	width: 6%;
 	position: absolute;
 	left: 10%;
 	bottom: 8%;
@@ -87,9 +87,9 @@ body {
 
 #volume-img {
 	position: absolute;
-	left: 25px;
-	top: 25px;
-	width: 40px;
+	left: 2%;
+	top: 2%;
+	width: 2.5%;
 	cursor: pointer;
 
 	transition: top 0.2s;
@@ -97,10 +97,10 @@ body {
 #bar-to-mute {
 	position: absolute;
 	pointer-events: none;
-	left: 21px;
-	top: 42px;
-	height: 1px;
-	width: 44px;
+	left: 1.8%;
+	top: 4.2%;
+	height: 0.05%;
+	width: 2.7%;
 
 	background-color: #0d0d0e;
 	color: #f8f4e1;
@@ -119,9 +119,9 @@ body {
 
 #crown-img {
 	z-index: 1;
-	width: 50px;
+	width: 2.5%;
 	position: absolute;
-	right: 22%;
+	right: 22.5%;
 	top: 31.5%;
 
 	transform: rotate(-40deg);
@@ -136,7 +136,7 @@ body {
 	margin-top: -20px;
 	text-align: center;
 	padding: 20px;
-	font-size: 8rem;
+	font-size: 8em;
 	font-weight: 600;	
 	color: #0f1123;
 
