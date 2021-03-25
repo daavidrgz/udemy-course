@@ -10,6 +10,7 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0px;
+	overflow: hidden;
 
 	transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
@@ -60,8 +61,8 @@ body {
 #heart-img {
 	width: 100px;
 	position: absolute;
-	right: 1%;
-	bottom: 2%;
+	right: -1%;
+	bottom: -2%;
 
 	transform: rotate(-20deg);
 
@@ -120,16 +121,12 @@ body {
 #crown-img {
 	z-index: 1;
 	width: 50px;
-	position: absolute;
-	right: 22%;
-	top: 31.5%;
-
+	position: relative;
+	right: 5%;
 	transform: rotate(-40deg);
-
-	transition: top 0.2s;
 }
-#crown-img:hover {
-	top: 30.5%;
+.fake-crown {
+	visibility: hidden;
 }
 
 .title {
@@ -286,8 +283,10 @@ body {
 }
 
 .scores-container {
+	z-index: 1;
+	cursor: pointer;
 	position: absolute;
-	right: 5%;
+	right: -15%;
 	top: 15%;
 	width: 20%;
 	height: 40%;
@@ -298,7 +297,12 @@ body {
 	transform: rotate(-15deg);
 
 	text-align: center;
+	transition: all 0.2s;
 }
+.scores-container:hover {
+	right: -10%;
+}
+
 
 .scores-text {
 	display: flex;
@@ -373,7 +377,7 @@ body {
 	}
 	#arrow-img {
 		width: 100px;
-		bottom: 2%;
+		bottom: 6%;
 	}
 	#bar-to-mute {
 		left: 2%;
@@ -406,8 +410,23 @@ body {
 		font-size: 0.6rem;
 	}
 	.scores-container {
-		visibility: hidden;
+		width: 30%;
+		height: 20%;
+		right: -25%;
 	}
+	.scores-container:hover {
+		right: -20%;
+	}
+	.scores-text {
+		font-size: 2rem;
+	}
+	.score {
+		font-size: 1.5rem;
+	}
+	#crown-img {
+		width: 20px;
+	}
+
 	.game-button {
 		width: 35%;
 		font-size: 2rem;

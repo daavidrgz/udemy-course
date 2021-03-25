@@ -37,12 +37,20 @@
 	<img id="volume-img" src="images/volume-up.svg" alt="Volume Button" onclick="toggleMute()">
 	<div id="bar-to-mute" class="pattern-diagonal-lines-sm"></div>
 
-	<img id="crown-img" src="images/crown-sketch-variant.svg" alt="Crown Image">
-	<div class="scores-container">
+	<div class="scores-container" onclick="toggleScoreTable()">
 		<div class="scores-text">Scores</div>
-		<div id="score1" class="score"></div>
-		<div id="score2" class="score"></div>
-		<div id="score3" class="final-score"></div>
+		<div id="score1" class="score">
+			<img id="crown-img" src="images/crown-sketch-variant.svg" alt="Crown Image">
+			<span></span>
+		</div>
+		<div id="score2" class="score">
+			<img id="crown-img" class="fake-crown" src="images/crown-sketch-variant.svg" alt="Crown Image">
+			<span></span>
+		</div>
+		<div id="score3" class="final-score">
+			<img id="crown-img" class="fake-crown" src="images/crown-sketch-variant.svg" alt="Crown Image">
+			<span></span>
+		</div>
 	</div>
 	<!--  -->
 

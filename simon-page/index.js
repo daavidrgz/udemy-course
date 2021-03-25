@@ -220,8 +220,17 @@ function showScores(round) {
 	});
 	for ( i = 0; i < 3; i++ ) {
 		if ( i < bestGames.length )
-			$("#score" + (1+i)).text((i+1) + ".- Round " + bestGames[i]);
+			$("#score" + (1+i) + " span").text((i+1) + ".- Round " + bestGames[i]);
 	}
+}
+
+var scoreOn = false;
+function toggleScoreTable() {
+	if ( !scoreOn )
+		$(".scores-container").css("right", "5%");
+	else
+		$(".scores-container").css("right", "");
+	scoreOn = !scoreOn;
 }
 
 function exitGame() {
