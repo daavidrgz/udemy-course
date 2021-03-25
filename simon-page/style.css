@@ -413,6 +413,7 @@ body {
 	}
 	.scores-container {
 		width: 30%;
+		top: 20%;
 		height: 20%;
 		right: -25%;
 	}
