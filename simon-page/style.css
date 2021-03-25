@@ -73,12 +73,12 @@ body {
 	transition: all 0.2s;
 }
 #heart-img:hover {
-	right: 1.5%;
-	bottom: 2.5%;
+	right: 0.5%;
+	bottom: 0%;
 }
 
 #arrow-img {
-	opacity: 85%;
+	opacity: 75%;
 	width: 150px;
 	position: absolute;
 	left: 10%;
@@ -424,6 +424,9 @@ body {
 		font-size: 2rem;
 	}
 	.score {
+		font-size: 1.5rem;
+	}
+	.final-score {
 		font-size: 1.5rem;
 	}
 	#crown-img {
