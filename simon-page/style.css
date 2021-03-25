@@ -195,7 +195,7 @@ body {
 	background-color: #6aa331;
 }
 #yellow-key {
-	background-color: #cfa92cf1;
+	background-color: #c5a026;
 }
 
 .buttons-container {
@@ -285,20 +285,6 @@ body {
 	box-shadow: 0px 0px 30px 10px #e84545;
 }
 
-.handwritten-text {
-	font-family: 'Homemade Apple';
-	position: absolute;
-	z-index: 1;
-	left: 13%;
-	top: 22%;
-	width: 15%;
-
-	color: #284283;
-	font-size: 2rem;
-	text-align: center;
-	transform: rotate(-10deg);
-}
-
 .scores-container {
 	position: absolute;
 	right: 5%;
@@ -350,31 +336,74 @@ body {
 	text-transform: uppercase;
 }
 
+.copyright {
+	font-family: 'Homemade Apple';
+	position: fixed;
+	z-index: 1;
+	left: 8%;
+	bottom: 5px;
+
+	color: #284283;
+	font-size: 0.7rem;
+}
+
 @media screen and (max-width: 900px) {
 	.key-container {
 		width: 70%;
 		margin-top: 20%;
 	}
 	.title {
-		font-size: 7rem;
+		font-size: 5.5rem;
 	}
-	.handwritten-text {
-		font-size: 1rem;
+	.copyright {
+		font-size: 0.8rem;
+	}
+	.game-button {
+		width: 25%;
+		font-size: 2rem;
+	}
+	.game-over {
+		left: 28%;
+		width: 40%;
+		font-size: 4rem;
+	}
+	#check-img {
+		width: 50px;
+		right: 5%;
+	}
+	#arrow-img {
+		width: 100px;
+		bottom: 2%;
+	}
+	#bar-to-mute {
+		left: 2%;
+		top: 3.7%;
+		width: 30px;
+	}
+	#volume-img {
+		width: 30px;
+		left: 3%;
+		top: 2%;
+	} 
+	#heart-img, #star-img {
+		width: 70px;
 	}
 }
 
 @media screen and (max-width: 550px) {
 	.key-container {
 		width: 80%;
-		margin-top: 30%;
+		height: 40%;
+		margin-top: 20%;
 	}
 	.title {
-		font-size: 5rem;
+		border-top: 2px dashed #0f1123a8;
+		border-bottom: 2px dashed #0f1123a8;
+		margin-top: 15%;
+		font-size: 4rem;
 	}
-	.handwritten-text {
-		font-size: 0.8rem;
-		width: 30%;
-		top: 15%;
+	.copyright {
+		font-size: 0.6rem;
 	}
 	.scores-container {
 		visibility: hidden;
@@ -383,20 +412,31 @@ body {
 		width: 35%;
 		font-size: 2rem;
 	}
+	.game-over {
+		left: 18%;
+		width: 60%;
+		font-size: 3rem;
+	}
+	#vertical-rule {
+		width: 2px;
+	}
 	#check-img {
 		width: 40px;
 		right: 5%;
 	}
 	#arrow-img {
 		width: 80px;
-		bottom: 2%;
+		bottom: 10%;
 	}
 	#bar-to-mute {
-		left: 1%;
+		left: 2%;
+		top: 3.7%;
+		width: 30px;
 	}
 	#volume-img {
-		width: 40px;
-		left: 2%;
+		width: 30px;
+		left: 3%;
+		top: 2%;
 	} 
 	#heart-img, #star-img {
 		width: 50px;
