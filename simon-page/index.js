@@ -125,11 +125,11 @@ function myLoop() {
 function toggleMute() {
 	if ( document.querySelector("#bg-music").paused ) {
 		document.querySelector("#bg-music").play();
-		$("#volume-img").attr("src", "/images/volume-up.svg");
+		$("#volume-img").attr("src", "images/volume-up.svg");
 
 	} else {
 		document.querySelector("#bg-music").pause();
-		$("#volume-img").attr("src", "/images/mute.svg");
+		$("#volume-img").attr("src", "images/mute.svg");
 		
 	}	
 }
@@ -208,8 +208,18 @@ function showScores(round) {
 		return b - a;
 	});
 	for ( i = 0; i < 3; i++ ) {
-		if ( i < bestGames.length )
-			$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
+		if ( i < bestGames.length ) {
+			if ( bestGames.length < 4 )
+				$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
+
+			else if ( $("#score" + (i + 1) + " span").text() != ((i + 1) + ".- Round " + bestGames[i]) ) {
+				$("#score" + (i + 1) + " span").addClass("hide");
+				$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
+				setTimeout(function(i) {
+					$("#score" + (i + 1) + " span").removeClass("hide");
+				}, 400, i);		
+			}
+		}
 	}
 }
 
@@ -233,9 +243,6 @@ function exitGame() {
 	$("#quit-button").slideUp(200);
 	$("#start-button").slideUp(200);
 	$("#start-button").delay(500).slideDown(200);
-	setTimeout(function() {
-		$("#start-button").text("Continue");
-	}, 500);
 }
 
 var order = true;
