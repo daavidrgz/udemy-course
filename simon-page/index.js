@@ -82,23 +82,12 @@ function showCurrentRound() {
 }
 
 function showYourTurn() {
+	var rotation = Math.floor(Math.random() * 90) - 55;
 	var colors = ["#be2431b6", "rgb(49, 163, 74)", "#0f1123c9"];
-	$(".your-turn").css("transform", "rotate(" + (Math.floor(Math.random() * 90) - 55) + "deg)");
+	$(".your-turn").css("transform", "rotate(" + rotation + "deg)");
 	$(".your-turn").css("border-color", colors[Math.floor(Math.random() * 3)]);
 	$(".your-turn").slideDown(300);
-	// moveYourTurn();
 }
-
-// function moveYourTurn() {
-// 	console.log($(".your-turn").css("transform"));
-// 	$(".your-turn").css("transform", "rotate(2deg)");
-// 	setTimeout(function() {
-// 		$(".your-turn").css("transform", "rotate(-2deg)");
-// 		setTimeout(function() {
-// 			moveYourTurn();
-// 		}, 900);
-// 	},900);
-// }
 
 function testCorrectKey(event) {
 	var keyPressed = event.target.id;
@@ -136,11 +125,12 @@ function myLoop() {
 function toggleMute() {
 	if ( document.querySelector("#bg-music").paused ) {
 		document.querySelector("#bg-music").play();
-		$("#bar-to-mute").slideUp(100);
+		$("#volume-img").attr("src", "/images/volume-up.svg");
 
 	} else {
 		document.querySelector("#bg-music").pause();
-		$("#bar-to-mute").slideDown(100);
+		$("#volume-img").attr("src", "/images/mute.svg");
+		
 	}	
 }
 
@@ -157,7 +147,7 @@ function gameOver() {
 	gameOverMusic.volume = 0.4;
 	gameOverMusic.play();
 
-	animate({animation: makeEaseOut(bounce), draw: function(progress){
+	animate({animation: makeEaseOut(bounce), draw: function(progress) {
 		$(".game-over").css("top", (progress * 64 - 30) + "%");
 	}, duration: 1500});
 
@@ -219,7 +209,7 @@ function showScores(round) {
 	});
 	for ( i = 0; i < 3; i++ ) {
 		if ( i < bestGames.length )
-			$("#score" + (1+i) + " span").text((i+1) + ".- Round " + bestGames[i]);
+			$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
 	}
 }
 
@@ -246,4 +236,30 @@ function exitGame() {
 	setTimeout(function() {
 		$("#start-button").text("Continue");
 	}, 500);
+}
+
+var order = true;
+function showSocialMedia() {
+	$(".social-media-container").toggleClass("expand-social-media");
+	$("#share-img").toggleClass("rotate-180");
+
+	if ( order ) {
+		$("#twitter-container").toggleClass("hide");
+		setTimeout(function() {
+			$("#email-container").toggleClass("hide");
+		}, 100);
+		setTimeout(function() {
+			$("#instagram-container").toggleClass("hide");
+		}, 200);
+	} else {
+		$("#instagram-container").toggleClass("hide");
+		setTimeout(function() {
+			$("#email-container").toggleClass("hide");
+		}, 100);
+		setTimeout(function() {
+			$("#twitter-container").toggleClass("hide");
+		}, 100);
+	}
+	
+	order = !order;
 }

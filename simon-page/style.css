@@ -94,25 +94,6 @@ body {
 
 	transition: top 0.2s;
 }
-#bar-to-mute {
-	position: absolute;
-	pointer-events: none;
-	left: 21px;
-	top: 42px;
-	height: 1px;
-	width: 44px;
-
-	background-color: #0d0d0e;
-	color: #f8f4e1;
-	border: 1px solid #0d0d0e;
-	border-radius: 10px;
-	transform: rotate(-45deg);
-
-	transition: top 0.2s;
-}
-#volume-img:hover + #bar-to-mute {
-	top: 39px;
-}
 #volume-img:hover {
 	top: 22px;
 }
@@ -130,6 +111,7 @@ body {
 
 .title {
 	margin-top: -1%;
+	margin: -1% auto 0 auto;
 	text-align: center;
 	padding: 1%;
 	font-size: 8rem;
@@ -141,6 +123,74 @@ body {
 .red-dot {
 	position: relative;
 	color: #be2431de;
+}
+#share-img {
+	position: absolute;
+	right: 25px;
+	top: 32px;
+	width: 40px;
+	cursor: pointer;
+
+	transition: all 0.4s;
+}
+.rotate-180 {
+	transform: rotate(360deg);
+}
+
+.social-media-container {
+	display: flex;
+	position: absolute;
+	width: 0px;
+	right: 90px;
+	top: 25px;
+	justify-content: space-around;
+	align-items: center;
+	visibility: hidden;
+
+	background-color: #e7e2cc85;
+	border: 2px solid #0f112338;
+	border-radius: 10px;
+
+	transition: width 0.5s, visibility 0.5s;
+
+}
+.expand-social-media {
+	visibility: visible;
+	width: 180px;
+}
+.social-media-img {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	opacity: 100%;
+	visibility: visible;
+
+	background-color: #e7e2cc00;
+	border-radius: 8px;
+	
+	transition: background-color 0.3s, opacity 0.2s, visibility 0.2s;
+
+}
+.social-media-img:hover {
+	background-color: #d4cfbd96;
+}
+.hide{
+	opacity: 0%;
+	visibility: hidden;
+}
+#instagram-img {
+	margin: auto;
+	width: 29px;
+}
+#email-img {
+	margin: auto;
+	width: 55px;
+}
+#twitter-img {
+	margin: auto;
+	width: 40px;
 }
 
 .key-container {
@@ -376,8 +426,7 @@ body {
 		font-size: 4rem;
 	}
 	#check-img {
-		width: 50px;
-		right: 5%;
+		visibility: hidden;
 	}
 	#arrow-img {
 		width: 100px;
@@ -392,7 +441,10 @@ body {
 		width: 30px;
 		left: 3%;
 		top: 2%;
-	} 
+	}
+	#volume-img:hover {
+		top: 2%;
+	}
 	#heart-img, #star-img {
 		width: 70px;
 	}
@@ -408,7 +460,7 @@ body {
 		box-shadow: 5px 5px #222831a6;
 	}
 	.key-pressed {
-		top: 4px;
+		top: 0px;
 		box-shadow: none;
 		filter: brightness(1.5) saturate(1.5);
 	}
@@ -477,27 +529,66 @@ body {
 		
 		font-size: 2.5rem;
 	}
+	.social-media-container {
+		right: 14%;
+		top: 1.5%;
+	}
+	.expand-social-media {
+		visibility: visible;
+		width: 120px;
+	}
+	.social-media-img {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		opacity: 100%;
+
+		background-color: #e7e2cc00;
+		border-radius: 8px;
+		
+		transition: background-color 0.3s, opacity 0.2s, visibility 0.2s;
+	}
+	.hide{
+		opacity: 0%;
+		visibility: hidden;
+	}
+	#instagram-img {
+		margin: auto;
+		width: 18px;
+	}
+	#email-img {
+		margin: auto;
+		width: 40px;
+	}
+	#twitter-img {
+		margin: auto;
+		width: 26px;
+	}
+
 	#vertical-rule {
 		width: 2px;
 	}
 	#check-img {
-		width: 40px;
-		right: 5%;
+		width: 30px;
+		right: 2%;
+		top: 10%;
 	}
 	#arrow-img {
 		width: 80px;
 		bottom: 10%;
 	}
-	#bar-to-mute {
-		left: 2%;
-		top: 3.7%;
-		width: 30px;
-	}
 	#volume-img {
 		width: 30px;
-		left: 3%;
+		left: 8%;
 		top: 2%;
-	} 
+	}
+	#share-img {
+		width: 30px;
+		right: 3%;
+		top: 2%;
+	}
 	#heart-img, #star-img {
 		width: 50px;
 	}

@@ -7,7 +7,7 @@
 	<title>The Simon Game</title>
 
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="node_modules/pattern.css/dist/pattern.css">
+	<link rel="stylesheet" href="pattern.css">
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
@@ -21,6 +21,13 @@
 	<img id="check-img" src="images/verification-sign-sketch.svg" alt="Check Image">
 	<img id="heart-img" src="images/heart-sketch.svg" alt="Heart Image">
 	<img id="arrow-img" src="images/pointer-arrow-sketch.svg" onclick="toggleFollowing()" alt="Arrow Image">
+	<div class="social-media-container">
+		<a id="instagram-container" class="social-media-img hide" target="_blank" href="https://www.google.com"><img id="instagram-img" src="images/instagram-sketched-logo.svg" alt="instagram Icon"></a>
+		<a id="email-container" class="social-media-img hide" target="_blank" href="https://www.google.com"><img id="email-img" src="images/email-winged-envelope-outlined-sketch.svg" alt="Email Icon"></a>
+		<a id="twitter-container" class="social-media-img hide" target="_blank" href="https://www.google.com"><img id="twitter-img" src="images/twitter.svg" alt="Email Icon"></a>
+
+	</div>
+	<img id="share-img" src="images/share.svg" alt="Share Icon" onclick="showSocialMedia()">
 	<div class="your-turn">
 		Your Turn
 	</div>
@@ -31,8 +38,7 @@
 		© 2021 the simon game | All rights reserved
 	</div>
 	<audio id="bg-music" src="sounds/bg-music.mp3" loop></audio> <!-- Bg Music -->
-	<img id="volume-img" src="images/volume-up.svg" alt="Volume Button" onclick="toggleMute()">
-	<div id="bar-to-mute" class="pattern-diagonal-lines-sm"></div>
+	<img id="volume-img" src="images/mute.svg" alt="Volume Button" onclick="toggleMute()">
 
 	<div class="scores-container" onclick="toggleScoreTable()">
 		<div class="scores-text">Scores</div>
@@ -51,7 +57,7 @@
 	</div>
 	<!--  -->
 
-	<nav>
+	<nav class="nav-bar">
 		<div class="title">The Simon Game <span class="red-dot">.</span></div>
 	</nav>
 	<div class="current-round fade-in">
