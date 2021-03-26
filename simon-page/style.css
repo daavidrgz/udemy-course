@@ -145,8 +145,8 @@ body {
 	align-items: center;
 	visibility: hidden;
 
-	background-color: #e7e2cc85;
-	border: 2px solid #0f112338;
+	background-color: #e7e2cc00;
+	border: 2px solid #0f1123af;
 	border-radius: 10px;
 
 	transition: width 0.5s, visibility 0.5s;
