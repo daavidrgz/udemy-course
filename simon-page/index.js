@@ -209,13 +209,10 @@ function showScores(round) {
 	});
 	for ( i = 0; i < 3; i++ ) {
 		if ( i < bestGames.length ) {
-			if ( bestGames.length < 4 )
-				$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
-
-			else if ( $("#score" + (i + 1) + " span").text() != ((i + 1) + ".- Round " + bestGames[i]) ) {
+			if ( $("#score" + (i + 1) + " span").text() != ((i + 1) + ".- Round " + bestGames[i]) ) {
 				$("#score" + (i + 1) + " span").addClass("hide");
-				$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
 				setTimeout(function(i) {
+					$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
 					$("#score" + (i + 1) + " span").removeClass("hide");
 				}, 400, i);		
 			}
