@@ -130,13 +130,12 @@ function toggleMute() {
 	} else {
 		document.querySelector("#bg-music").pause();
 		$("#volume-img").attr("src", "images/mute.svg");
-		
+
 	}	
 }
 
 function gameOver() {
 	showScores(roundKeys.length);
-	$("#crown-img").fadeIn(300);
 
 	$(".key").off("click");
 	numGames++;
@@ -212,6 +211,7 @@ function showScores(round) {
 			if ( $("#score" + (i + 1) + " span").text() != ((i + 1) + ".- Round " + bestGames[i]) ) {
 				$("#score" + (i + 1) + " span").addClass("hide");
 				setTimeout(function(i) {
+					$("#crown-img").fadeIn(300);
 					$("#score" + (i + 1) + " span").text((i + 1) + ".- Round " + bestGames[i]);
 					$("#score" + (i + 1) + " span").removeClass("hide");
 				}, 400, i);		

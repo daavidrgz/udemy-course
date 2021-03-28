@@ -1,0 +1,428 @@
+
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+	font-style: normal;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+/** Heavy */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 900;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-heavy-webfont.woff");
+}
+
+body {
+	margin: 0px;
+	font-family: 'San Francisco';
+	background-color: #1c1427;
+	height: 100vh;
+	user-select: none;
+}
+
+.nav-bar {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	height: 10%;
+	padding: 1% 0;
+}
+.title-dots {
+	width: 10%;
+	display: inline-block;
+	border-bottom: 10px dotted #903749;
+}
+.title-container {
+	width: 50%;
+	display: inline-block;
+	margin: 0 5%;
+}
+.title {
+	font-weight: 900;
+	font-size: 7rem;
+	color: #f8f5f1;
+
+	text-shadow: 1px 1px #16c79b32, 2px 2px #16c79b32, 3px 3px #16c79b32, 4px 4px #16c79b32, 5px 5px #16c79b32;
+	transition: all 0.4s;
+}
+.title:hover {
+	text-shadow: 1px 1px #16c79b32, 2px 2px #16c79b32, 3px 3px #16c79b32, 4px 4px #16c79b32, 5px 5px #16c79b32, 0 0 15px #16c79bc9;
+}
+.subtitle {
+	margin-left: 2%;
+
+	font-style: italic;
+	font-weight: 700;
+	font-size: 2rem;
+	color: #e84545;
+
+	transition: all 0.4s;
+}
+.subtitle:hover {
+	text-shadow: 0 0 10px #e84545;
+}
+
+.main-container {
+	display: flex;
+	height: 84%;
+	width: 85%;
+	margin: 0 auto;
+	padding: 5% 5% 0;
+
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	background-color: #eeebdd;
+
+	box-shadow: 3px 3px #e8454542, 6px 6px #e8454542, 9px 9px #e8454542, 12px 12px #e8454542, 15px 15px #e8454542;
+}
+
+/* WEATHER INFO CONTAINER (LEFT) */
+.weather-info {
+	position: relative;
+	background-color: #1c1427;
+	border-radius: 30px;
+	height: 85%;
+	width: 40%;
+	padding: 2%;
+
+	box-shadow: 0 0 20px 4px #999999;
+	text-align: left;
+
+	transition: all 0.2s;
+}
+.weather-info:hover {
+	box-shadow: 0 0 30px 1px #464646;
+}
+
+/* RELOAD BUTTON */
+#reload-button {
+	position: absolute;
+	top: 4%;
+	right: 5%;
+	transform: scale(1.5) rotate(0deg);
+	color: #eeebdde8;
+	cursor: pointer;
+
+	transition: all 1s;
+}
+
+
+/* WEATHER CITY */
+.city {
+	margin: 2% 4% 2% 4%;
+	font-size: 6rem;
+	font-weight: 800;
+	background: linear-gradient(to right, #e84545, #dddddd);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+/* FORECAST CONTAINER */
+.forecast-container {
+	display: flex;
+	width: 85%;
+	height: 45%;
+	margin: 5% auto 1% auto;
+	padding: 5%;
+
+	align-items: center;
+	border: 2px solid #f05454;
+	border-radius: 20px;
+	background-color: #1c1427;
+	box-shadow: 0 0 20px 0px #75757541;
+	text-align: left;
+
+	transition: all 0.4s;
+}
+.forecast-container:hover {
+	box-shadow: 0 0 10px 0px #f05454;
+}
+.gradient-forecast-titles {
+	background: linear-gradient(to right, #16c79a, #dbf6e9);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	text-shadow: 0 0 10px #16c79b00;
+	transition: all 0.4s;
+}
+
+/* TEMPERATURE SECTION */
+/* CURRENT TEMPERATURE SUBSECTION */
+.temperature {
+	height: 95%;
+	width: 30%;
+
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #f8f5f1;
+}
+#current-temp {
+	display: inline-block;
+	margin-top: 10%;
+	font-size: 7.5rem;
+	font-weight: 600;
+	transition: all 0.3s;
+}
+/****************************/
+
+
+
+/* MIN MAX TEMP SUBSECTION */
+.max-min-temp-container {
+	position: relative;
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#arrow-top {
+	width: 34px;
+	transform: rotate(-90deg);
+}
+#max-temp {
+	margin: 0 5px;
+	color: #f84949d0;
+	transition: all 0.3s;
+}
+#max-temp-tooltip {
+	visibility: hidden;
+	opacity: 0%;
+	top: -125%;
+	left: 5%;
+	width: 80px;
+}
+#max-temp-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f8f5f1 transparent transparent transparent;
+}
+.max-temp-container:hover #max-temp-tooltip {
+	opacity: 100%;
+	visibility: visible;
+}
+
+#arrow-bottom {
+	width: 34px;
+	transform: rotate(90deg);
+}
+#min-temp {
+	margin: 0 5px;
+	color: #9ddfd3d7;
+	transition: all 0.3s;
+}
+#min-temp-tooltip {
+	visibility: hidden;
+	opacity: 0%;
+	top: -125%;
+	left: 50%;
+	width: 80px;
+}
+#min-temp-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f8f5f1 transparent transparent transparent;
+}
+.min-temp-container:hover #min-temp-tooltip {
+	opacity: 100%;
+	visibility: visible;
+}
+/*************************/
+
+
+/* FEELS LIKE SUBSECTION */
+.feels-like-container {
+	display: flex;
+	margin: 20% 0 0 0;
+	width: 60%;
+	position: relative;
+}
+#feels-like {
+	position: relative;
+	bottom: 5px;
+	font-size: 1.8rem;
+	margin-left: 15%;
+	transition: all 0.3s;
+}
+#feels-like-tooltip {
+	visibility: hidden;
+	opacity: 0%;
+}
+#feels-like-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #f8f5f1 transparent;
+}
+.feels-like-container:hover #feels-like-tooltip {
+	opacity: 100%;
+	visibility: visible;
+}
+/***********************/
+/***********************/
+
+/* FORECAST SECTION */
+.forecast {
+	height: 95%;
+	width: 30%;
+
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+#current-forecast {
+	display: block;
+	margin-top: 20%;
+	font-weight: 600;
+	color: #f8f5f1;
+	font-size: 3.3rem;
+}
+#forecast-description {
+	display: block;
+	font-weight: 500;
+	color: #f8f5f1;
+	font-size: 1rem;
+}
+/**********************/
+
+
+
+/* WEATHER DETAILS SECTION */
+.weather-details {
+	height: 95%;
+	width: 30%;
+
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.weather-details-titles {
+	margin: 15% 0 5% 0;
+	display: block;
+	font-size: 1.2rem;
+	color: #f8f5f1;
+}
+.weather-details-data {
+	font-weight: 600;
+	font-size: 1.6rem;
+	color: #f8f5f1;
+}
+/*************************/
+
+
+/* WROLD MAP */
+.world-map {
+	background-color: #221535;
+	border-radius: 30px;
+	height: 85%;
+	width: 60%;
+	margin-left: 5%;
+	box-shadow: 0 0 20px 4px #999999;
+	text-align: left;
+
+	transition: all 0.2s;
+}
+.world-map:hover {
+	box-shadow: 0 0 30px 1px #464646;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MISCELLANEOUS */
+.vr {
+	width: 3px;
+	height: 100%;
+	margin: 0 5%;
+
+	border-radius: 20px;
+	background-color: #a3c5d2;
+	box-shadow: 0 0 10px 0 #a3c5d200;
+
+	transition: all 0.4s;
+}
+.forecast-container:hover .vr {
+	box-shadow: 0 0 15px 0 #a3c5d2;
+}
+
+.tooltips {
+	user-select: none;
+	position: absolute;
+	width: 70px;
+	z-index: 1;
+	padding: 10px;
+
+	font-weight: 500;
+	font-size: 1rem;
+	background-color: #f8f5f1;
+	color: #2b2e4a;
+	text-align: center;
+	border-radius: 5px;
+	top: 102%;
+	left: -5%;
+	
+	transition: all 0.3s 0.4s;
+}
+
+.hide {
+	opacity: 0%;
+	visibility: hidden;
+}

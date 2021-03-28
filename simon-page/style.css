@@ -92,11 +92,6 @@ body {
 	top: 25px;
 	width: 40px;
 	cursor: pointer;
-
-	transition: top 0.2s;
-}
-#volume-img:hover {
-	top: 22px;
 }
 
 #crown-img {
@@ -433,6 +428,7 @@ body {
 		width: 30px;
 		left: 3%;
 		top: 2%;
+		transition: all 0.2s;
 	}
 	#volume-img:hover {
 		top: 2%;
@@ -575,6 +571,7 @@ body {
 		width: 30px;
 		left: 8%;
 		top: 2%;
+		transition: all 0.2s;
 	}
 	#share-img {
 		width: 25px;

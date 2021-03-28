@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet prefetch" href="sf-font.css">
+	<link rel="stylesheet" href="assets/images/uicons-regular-rounded/css/uicons-regular-rounded.css">
+	<title>Document</title>
+</head>
+<body>
+	<nav class=nav-bar>
+		<div class=title-dots></div>
+		<div class="title-container">
+			<span class=title>The Weather</span>
+			<span class=subtitle>Around the world</span>
+		</div>
+		<div class=title-dots></div>
+	</nav>
+
+	<div class="main-container">
+		<div class=weather-info>
+
+			<i id="reload-button" class="fi-rr-refresh" onclick="reloadWeather()"></i>
+
+			<p class="city">Cangas do Morrazo</p>
+			<div class="forecast-container">
+				<div class="temperature">
+					<div class="gradient-forecast-titles">Temperature</div>
+					<span id="current-temp">18</span>
+					<span>°C</span>
+					<div class="max-min-temp-container">
+						<img id="arrow-top" src="assets/images/right-arrow.svg"></img>
+						<span class="max-temp-container">
+							<span id="max-temp">20°C</span>
+							<span id="max-temp-tooltip" class="tooltips">Max Temp</span>
+						</span>
+						
+						<img id="arrow-bottom" src="assets/images/right-arrow.svg"></img>
+						<span class="min-temp-container">
+							<span id="min-temp">11°C</span>
+							<span id="min-temp-tooltip" class="tooltips">Min Temp</span>
+						</span>
+						
+					</div>
+
+					<div class="feels-like-container">
+						<span id="feels-like-tooltip" class="tooltips">Feels Like</span>
+						<i class="fi-rr-user feels-like-icon"></i>
+						<span id="feels-like">12°C</span>
+					</div>
+				</div>
+
+				<div class="vr"></div>
+
+				<div class="forecast">
+					<div class="gradient-forecast-titles">Forecast</div>
+					<span id="current-forecast">Clouds</span>
+					<span id="forecast-description">Some clouds</span>
+				</div>
+
+				<div class="vr"></div>
+
+				<div class="weather-details">
+					<div class="gradient-forecast-titles">Details</div>
+					<span class="weather-details-titles">Wind</span>
+					<span id="current-wind" class="weather-details-data">18.0 km/h</span>
+					<span class="weather-details-titles">Humidity</span>
+					<span id="current-humidity" class="weather-details-data">62.0%</span>
+					<span class="weather-details-titles">Pressure</span>
+					<span id="current-pressure" class="weather-details-data">62.0%</span>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="world-map">
+
+			</div>
+		</div>
+		
+		<div class="more-info">
+
+		</div>
+	</div>
+
+	<script src="jQuery.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
