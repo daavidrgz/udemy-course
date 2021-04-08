@@ -18,8 +18,10 @@
 	<!-- ENTER PAGE -->
 	<div class="enter-page">
 		<div class="enter-title"><span>W</span><span>e</span><span>i</span><span>r</span><span>d</span> 
-			<span>T</span><span>i</span><span>m</span><span>e</span><span>s</span></div>
-		<div class="subtitle">A newspaper made with passion</div>
+			<span>T</span><span>i</span><span>m</span><span>e</span><span>s</span>
+			<div class="subtitle">A newspaper made with passion</div>
+		</div>
+		
 		<div class="scroll-down-container">
 			<span>Scroll Down</span>
 			<i class="fi-rr-angle-double-small-left"></i>
@@ -29,29 +31,71 @@
 
 	<!-- ABSOLUTE ELEMENTS -->
 
-	<div class="categories">
-		<a href="">World</a>
-		<a href="">Sports</a>
-		<a href="">Technology</a>
-		<a href="">Economy</a>
-		<a href="">US</a>
-		<a href="">Cience</a>
-	</div>
-
 	<nav>
 		<div class="title"><span>W</span><span>e</span><span>i</span><span>r</span><span>d</span> 
 			<span>T</span><span>i</span><span>m</span><span>e</span><span>s</span></div>
 		
-		<div class="right-nav-links">
-			<a href="#">Home</a>
-			<a id="categories" href="#">Categories</a>
-			<a href="#">Top</a>
+		<div class="right-nav-links-container">
+			<a class="right-nav-link" href="#">
+				<span>Home</span>
+			</a>
+			<div class="right-nav-link" href="#">
+				<span id="categories-link">Categories</span>
+				<div class="hover-wraper">
+					<div class="categories-container">
+						<div class="categories-container-arrow"></div>
+						<div class="category-wraper">
+							<a href="">World</a><i class="category-icon fi-rr-world"></i>
+						</div>
+						<div class="category-wraper">
+							<a href="">Technology</a><i class="category-icon fi-rr-computer"></i>
+						</div>
+						<div class="category-wraper">
+							<a href="">Economy</a><i class="category-icon fi-rr-dollar"></i>
+						</div>
+						<div class="category-wraper">
+							<a href="">Sport</a><i class="category-icon fi-rr-football"></i>
+						</div>
+						<div class="category-wraper">
+							<a href="">Science</a><i class="category-icon fi-rr-physics"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="right-nav-link" href="#">
+				<span>Top</span>
+			</a>
 		</div>
 	</nav>
 
 	
 
 	<div class="main-container">
+		<div class="top-articles">
+			<img src="assets/pedro-sanchez.jpg" id="top-article-img">
+			<div class="top-article-text">
+				<div class="top-article-title">
+					El Consejo de Estado pide al Gobierno reformar la ley de 
+					Medidas Especiales de Salud Pública como alternativa al estado de alarma
+				</div>
+				<div class="top-article-author">By El Liberal</div>
+				<div class="top-article-body">
+					El Consejo de Estado, supremo órgano consultivo del Gobierno, recomienda al Ejecutivo la
+					reforma de la Ley de Medidas Especiales de Salud Pública como la vía adecuada para dotar a las 
+					Comunidades Autónomas de instrumentos jurídicos suficientes para, en caso necesario, poder limitar derechos y libertades y 
+					hacer así frente a situaciones de pandemia, sin necesidad de tener que recurrir a la declaración del estado de alarma.
+				</div>
+				<div class="read-more-container">
+					<span>Read More</span>
+					<i id="read-more-icon" class="fi-rr-angle-small-down"></i>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="hr"></div>
+
+
 		<div class="article-entry">
 			<div class="article-details">
 				<div class="writer-image-container"><img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"/></div>
